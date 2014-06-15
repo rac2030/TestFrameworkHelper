@@ -9,7 +9,7 @@
 
     <groupId>ch.racic.testing</groupId>
     <artifactId>TestFrameworkHelper</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>TestFrameworkHelper library</name>
@@ -31,7 +31,7 @@
         <connection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</connection>
         <developerConnection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</developerConnection>
         <url>http://github.com/rac2030/TestFrameworkHelper</url>
-        <tag>TestFrameworkHelper-0.1.4</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
