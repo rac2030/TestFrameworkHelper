@@ -4,13 +4,12 @@
   ~ This code lab has been developed by Michel Racic (http://rac.su/+) and funded partially by Credit Suisse AG (http://www.credit-suisse.ch) and GDG Zürich (http://www.gdgzh.ch).
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.racic.testing</groupId>
     <artifactId>TestFrameworkHelper</artifactId>
-    <version>0.1.3-SNAPSHOT</version>
+    <version>0.1.3</version>
     <packaging>jar</packaging>
 
     <name>TestFrameworkHelper library</name>
@@ -32,7 +31,7 @@
         <connection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</connection>
         <developerConnection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</developerConnection>
         <url>http://github.com/rac2030/TestFrameworkHelper</url>
-        <tag>HEAD</tag>
+        <tag>TestFrameworkHelper-0.1.3</tag>
     </scm>
 
     <issueManagement>
