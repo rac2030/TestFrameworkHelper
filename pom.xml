@@ -11,77 +11,96 @@
 
     <groupId>ch.racic.testing</groupId>
     <artifactId>TestFrameworkHelper</artifactId>
-    <version>1.0</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-        <name>TestFrameworkHelper library</name>
-        <description>This library contains helper method for JUnit and TestNG.</description>
-        <url>https://github.com/rac2030/TestFrameworkHelper</url>
+    <name>TestFrameworkHelper library</name>
+    <description>This library contains helper method for JUnit and TestNG.</description>
+    <url>https://github.com/rac2030/TestFrameworkHelper</url>
 
 
-        <properties>
-            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-        <licenses>
-            <license>
-                <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            </license>
-        </licenses>
+    <licenses>
+        <license>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
 
-        <scm>
-            <connection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</connection>
-            <developerConnection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</developerConnection>
-            <url>http://github.com/rac2030/TestFrameworkHelper</url>
-        </scm>
+    <scm>
+        <connection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</connection>
+        <developerConnection>scm:git:git@github.com:rac2030/TestFrameworkHelper.git</developerConnection>
+        <url>http://github.com/rac2030/TestFrameworkHelper</url>
+    </scm>
 
-        <issueManagement>
-            <system>github</system>
-            <url>https://github.com/rac2030/TestFrameworkHelper/issues</url>
-        </issueManagement>
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/rac2030/TestFrameworkHelper/issues</url>
+    </issueManagement>
 
-        <developers>
-            <developer>
-                <id>rac2030</id>
-                <name>Michel Racic</name>
-                <url>https://github.com/rac2030</url>
-            </developer>
-        </developers>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>sonatype-nexus-staging</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
-        <dependencies>
-            <dependency>
+    <developers>
+        <developer>
+            <id>rac2030</id>
+            <name>Michel Racic</name>
+            <url>https://github.com/rac2030</url>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
             <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-            </dependency>
-            <dependency>
-            	<groupId>org.apache.commons</groupId>
-            	<artifactId>commons-exec</artifactId>
-            	<version>1.2</version>
-            </dependency>
-        </dependencies>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-exec</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
 
-        <profiles>
-            <profile>
-                <id>sign</id>
-                <build>
-                    <plugins>
-                        <!-- See http://maven.apache.org/plugins/maven-gpg-plugin/ -->
-                        <plugin>
-                            <artifactId>maven-gpg-plugin</artifactId>
-                            <version>1.4</version>
-                            <executions>
-                                <execution>
-                                    <phase>verify</phase>
-                                    <goals>
-                                        <goal>sign</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
-                </build>
-            </profile>
-        </profiles>
+    <profiles>
+        <profile>
+            <id>sign</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <!-- See http://maven.apache.org/plugins/maven-gpg-plugin/ -->
+                    <plugin>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.4</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
